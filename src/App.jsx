@@ -36,7 +36,9 @@ const App = () => {
               allowedRoles={[ROLES.User, ROLES.Editor, ROLES.Admin]}
             />
           }
-        ></Route>
+        >
+          
+        </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
           <Route path="editor" element={<Editor />} />
         </Route>
