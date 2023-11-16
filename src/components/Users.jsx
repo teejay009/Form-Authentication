@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 
 
-const Users = () => {} 
+const Users = () => { } 
   const [users, setUsers] = useState();
   const axiosPrivate = useAxiosPrivate()
 
