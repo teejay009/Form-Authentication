@@ -1,3 +1,24 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import Login from "./components/Login";
+import LinkPage from "./components/LinkPage";
+import Unauthorized from "./components/Unauthorized";
+import Home from "./components/Home";
+import Editor from "./components/Editor";
+import Admin from "./components/Admin";
+import Lounge from "./components/Lounge";
+import Missing from "./components/Missing";
+import RequireAuth from "./components/RequireAuth";
+import PersistLogin from "./components/PersistLogin";
+
+const ROLES = {
+  User: 2001,
+  Editor: 1984,
+  Admin: 5150,
+};
+
+
 const App = () => {
   return (
     <Routes>
@@ -9,7 +30,8 @@ const App = () => {
         <Route path="/Unauthorized" element={<Unauthorized />} />
 
         {/* private Routes */}
-        <Route element={<PersistLogin/>}>
+        <Route element={<PersistLogin />} >
+
             <Route element={<RequireAuth allowedRoles={[ROLES.User, ROLES.Editor, ROLES.Admin]}/>}>
                 <Route path="/" element={<Home />} />
             </Route>
@@ -22,8 +44,8 @@ const App = () => {
             <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]}/>}>
                 <Route path="lounge" element={<Lounge />} />
             </Route>
-        </Route>
         
+        </Route>
         
         {/* to catch all error */}
         <Route path="*" element={<Missing />} />
