@@ -48,6 +48,7 @@ const App = () => {
         >
           <Route path="lounge" element={<Lounge />} />
         </Route>
+        </Route>
 
         {/* to catch all error */}
         <Route path="*" element={<Missing />} />
