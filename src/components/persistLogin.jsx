@@ -34,7 +34,7 @@ const persistLogin = () => {
 
     return (
         <>
-        {!persist 
+        {persist 
         ? <Outlet/>
         :isLoading
         ?<p>Loading...</p> 
