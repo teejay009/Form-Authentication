@@ -6,7 +6,7 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 
 function Login() {
    const LOGIN_URL = '/auth'
-   const {setAuth} = useAuth()
+   const {setAuth, persist, setPersist} = useAuth()
 
    const navigate = useNavigate()
    const location = useLocation()
