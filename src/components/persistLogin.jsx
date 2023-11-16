@@ -10,7 +10,7 @@ const persistLogin = () => {
     const { auth, persist } = useAuth();
 
     useEffect(() => {
-        // let isMounted = true;
+         let isMounted = true;
 
         const verifyRefreshToken = async () => {
             try {
@@ -24,7 +24,7 @@ const persistLogin = () => {
         }
         !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false)
 
-        // return () => isMounted = false;
+         return () => isMounted = false;
     }, [])
 
     useEffect(() => {
