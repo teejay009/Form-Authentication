@@ -13,7 +13,7 @@ const Users = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
+  use(() => {
     let isMounted = true;
     const controller = new AbortController();
 
@@ -33,7 +33,7 @@ const Users = () => {
     return () => {
       isMounted = false;
       controller.abort();
-    
+    };
   }, []);
 
   return (
