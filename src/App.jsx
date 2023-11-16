@@ -29,6 +29,7 @@ const App = () => {
 
         <Route path="/" element={<Home />} />
         {/* private Routes */}
+        <Route element={<PersistLogin />}
         <Route
           element={
             <RequireAuth
