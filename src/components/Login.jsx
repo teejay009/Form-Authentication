@@ -94,6 +94,10 @@ function Login() {
                      required
                   />
                   <button>Sign In</button>
+                  <div className="persistCheck">
+                     <input type="checkbox" id="persist" onChange={togglePersist} checked={persist} />
+                     <label htmlFor="persist">Trust this device</label>
+                  </div>
                </form>
                <p>
                   Need an Acount? <br />
